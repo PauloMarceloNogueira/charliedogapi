@@ -1,0 +1,28 @@
+{
+  "name": "charliedogapi",
+  "version": "1.0.0",
+  "description": "Rest Api to Charlie e Dog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "author": "Paulo Marcelo Nogueira <paulomarceloa.nogueira@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.7.1",
+    "restify": "^7.3.0",
+    "restify-plugins": "^1.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "pretty-error": "^2.1.1",
+    "rimraf": "^2.6.2"
+  }
+}
