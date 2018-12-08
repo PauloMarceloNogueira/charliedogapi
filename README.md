@@ -10,7 +10,7 @@ projeto para estudo/desafio da API de um Petshop.
 
 #### rodando
 `cd charliedogapi`\
-`$ npm install `
+`$ npm install `\
 `$ npm start`
 
 ### buildando - para deploy
