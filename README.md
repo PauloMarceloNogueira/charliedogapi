@@ -10,7 +10,7 @@ projeto para estudo/desafio da API de um Petshop.
 
 #### rodando
 `cd charliedogapi`\
-`$ npm install `
+`$ npm install `\
 `$ npm start`
 
 ### buildando - para deploy
@@ -71,7 +71,7 @@ api
 | DELETE | /address/1 | exclui o endereço id = 1 |
 | POST | /address | adiciona um endereço |
 | GET | /checkin/1 | retorna checkin do usuário id = 1 |
-| POST | /addresses | adiciona um checkin |
+| POST | /checkin | adiciona um checkin |
 
 
 
