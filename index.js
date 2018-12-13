@@ -1,10 +1,8 @@
 import prettyError from 'pretty-error';
-prettyError.start();
-
-
 import ApiController from './src/controllers/ApiController';
 
+prettyError.start();
 const apiController = new ApiController();
 apiController.run(() => {
-  console.log('Api is up and running');
+  console.log(`Api is running on ${process.env.RESTIFY_PORT}`);
 });

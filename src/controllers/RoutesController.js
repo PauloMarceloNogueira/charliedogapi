@@ -41,6 +41,8 @@ module.exports = class RoutesController {
     this.restify.post('/dogs', (req, res) => this.dogs.insertDog(req, res));
     this.restify.put('/dogs', (req, res) => this.dogs.updateDog(req, res));
     this.restify.del('/dogs/:id', (req, res) => this.dogs.deleteDog(req, res));
+    this.restify.get('/dogs/size/:size', (req, res) => this.dogs.getDogsBySize(req, res));
+    this.restify.get('/dogs/value/:valueMax/:valueMin', (req, res) => this.dogs.getDogsByValue(req, res));
 
     this.restify.get('/checkin/:userId', (req, res) => this.checkin.getUserCheckin(req, res));
     this.restify.post('/checkin', (req, res) => this.checkin.insertCheckin(req, res));

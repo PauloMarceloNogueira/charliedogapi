@@ -21,10 +21,10 @@ module.exports = {
   },
 
   insertBreed(req, res) {
-    const { name } = req.body;
+    const { name, size } = req.body;
     const query = {
       text: 'INSERT INTO breeds(name) VALUES($1)',
-      values: [name],
+      values: [name, size],
     };
     postgres.query(query, (data) => {
       res.send(data);
@@ -32,10 +32,10 @@ module.exports = {
   },
 
   updateBreed(req, res) {
-    const { name, id } = req.body;
+    const { name, id, size } = req.body;
     const query = {
-      text: 'UPDATE breeds SET name=$1 WHERE id=$2',
-      values: [name, id],
+      text: 'UPDATE breeds SET name=$1, size=$3 WHERE id=$2',
+      values: [name, id, size],
     };
     postgres.query(query, (data) => {
       res.send(data);
