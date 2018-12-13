@@ -47,6 +47,59 @@ api
 
 ```
 
+## Banco de dados
+Para o projeto, foi escolhido o banco de dados relacional. Utilizei o Postgres.
+Subi ele em um RDS na AWS.
+### relacionamento
+
+````
+|____________________ |
+| dogs                |
+| ------------------- |
+| + id (int)(pk       |
+| + name (varchar)    |
+| + age (varchar)     |
+| + value (numeric)   |
+| + picture (varchar) |
+| - breed_id (int)(fk)|
+|_____________________|
+
+|____________________ |
+| breeds              |
+| ------------------- |
+| + id (int)(pk)      |
+| + name (varchar)    |
+| + size (varchar)    |
+|_____________________|
+
+|________________________ |
+| checkin                 |
+| ----------------------- |
+| + id (int)(pk)          |
+| - user_id (int)(fk)     |
+| - address_id (int)(fk)  |
+| + value (numeric)       |
+| - dog_id (int)(fk)      |
+| + qnt (int)             |
+|_________________________|
+
+|____________________ |
+| delivery_address    |
+| ------------------- |
+| + id (int)(pk)      |
+| + address (varchar) |
+| - user_id (int)(fk) |
+|_____________________|
+
+|____________________ |
+| users               |
+| ------------------- |
+| + id (int)(pk)      |
+| + name (varchar)    |
+| + cpf (varchar)     |
+|_____________________|
+````
+
 ## rotas
 | método | path | descrição |
 | ------ | ---- | ----------|
